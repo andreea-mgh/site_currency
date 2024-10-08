@@ -2,32 +2,42 @@
 <html>
 <head>
     <title>Convertor Valutar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Convertor Valutar</h1>
-    <label for="amount">Suma:</label>
-    <input type="number" id="amount" name="amount" required>
-    
-    <label for="from-currency">De la</label>
-    <select id="from-currency" name="from-currency" required>
-        <option value="RON">RON</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="PLN">PLN</option>
-    </select>
-    
-    <label for="to-currency">la </label>
-    <select id="to-currency" name="to-currency" required>
-        <option value="RON">RON</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="PLN">PLN</option>
-    </select>
-    
-    <button class="submit" onclick="exchangeCurrency()">Calculează</button>
+    <div class="content">
+        <h1>Convertor Valutar</h1>
 
-    <p id="result"></p>
-    <p id="error" style="color:red"></p>
+        <div class="field">
+            <label for="amount">Suma:</label>
+            <input type="number" id="amount" name="amount" required>
+        </div>
+
+        <div class="field">
+            <label for="from-currency">De la</label>
+            <select id="from-currency" name="from-currency" required>
+                <option value="RON">RON</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="PLN">PLN</option>
+            </select>
+            <label for="to-currency">la </label>
+            <select id="to-currency" name="to-currency" required>
+                <option value="RON">RON</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="PLN">PLN</option>
+            </select>
+        </div>
+        
+        <button class="submit" onclick="exchangeCurrency()">Calculează</button>
+
+        <p id="result"></p>
+        <p id="error" style="color:red"></p>
+    </div>
+
     <script src="exchange.js"></script>
 </body>
 </html>

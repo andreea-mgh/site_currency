@@ -1,0 +1,62 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    background-color: rgb(33, 46, 36);
+    color: #dadb97;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field {
+    /* background: linear-gradient(90deg, rgba(98,121,111,1) 0%, rgba(0,0,0,0) 40%); */
+    margin: 10px 0;
+    padding: 0.5em;
+    /* border-radius: 0.5rem; */
+    width: 300px;
+}
+
+.field input {
+    background-color: #dadb97;
+    border: none;
+}
+
+.field select {
+    background-color: #dadb97;
+    border: none;
+    margin: 0 0.5em;
+}
+
+button.submit {
+    background-color: #dadb97;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 300px;
+    margin: 2rem 0;
+}
+
+@media (min-width: 600px) {
+    .content {
+        max-width: 300px;
+        padding-left: 5rem;
+        box-shadow: 10vw 0 8vw 10vw rgb(33, 46, 36, 1);
+    }
+    body{
+        background-image: url(img/linus-nilsson-WfKndo8Vv7w-unsplash.jpg);
+        background-size: cover;
+    }
+}
