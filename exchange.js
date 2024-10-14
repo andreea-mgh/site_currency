@@ -3,6 +3,11 @@ function exchangeCurrency() {
     const amount = document.getElementById('amount').value;
     const fromCurrency = document.getElementById('from-currency').value;
     const toCurrency = document.getElementById('to-currency').value;
+
+    if(amount === '' || isNaN(amount)) {
+        document.getElementById('error').innerText = 'Trebuie să introduci o valoare numerică în câmpul de mai sus.';
+        return;
+    }
     
     fetch(`https://api.frankfurter.app/latest?base=${fromCurrency}`)
         .then(response => response.json())
