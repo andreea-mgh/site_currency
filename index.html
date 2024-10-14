@@ -21,15 +21,17 @@
                 <option value="RON">RON</option>
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
                 <option value="PLN">PLN</option>
             </select>
             <label for="to-currency">la </label>
             <select id="to-currency" name="to-currency" required>
-                <option value="RON">RON</option>
+                <!-- <option value="RON">RON</option>
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
-                <option value="PLN">PLN</option>
+                <option value="PLN">PLN</option> -->
             </select>
+            <button class="switch" onclick="switchCurrencies()">Schimbă</button>
         </div>
         
         <button class="submit" onclick="exchangeCurrency()">Calculează</button>

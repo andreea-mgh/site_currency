@@ -16,3 +16,33 @@ function exchangeCurrency() {
             document.getElementById('error').innerText = 'Error fetching exchange rates.';
         });
 };
+
+function switchCurrencies() {
+    const fromCurrency = document.getElementById('from-currency');
+    const toCurrency = document.getElementById('to-currency');
+    const temp = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    updateToCurrencyOptions();
+    toCurrency.value = temp;
+}
+
+function updateToCurrencyOptions() {
+    const fromCurrency = document.getElementById('from-currency').value;
+    const toCurrency = document.getElementById('to-currency');
+    const options = ['RON', 'USD', 'EUR', 'GBP', 'PLN'];
+
+    toCurrency.innerHTML = '';
+    options.forEach(option => {
+        if (option !== fromCurrency) {
+            const opt = document.createElement('option');
+            opt.value = option;
+            opt.innerText = option;
+            toCurrency.appendChild(opt);
+        }
+    });
+}
+
+// cand se incarca pagina
+updateToCurrencyOptions();
+// cand selectez
+document.getElementById('from-currency').addEventListener('change', updateToCurrencyOptions);
