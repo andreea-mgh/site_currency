@@ -4,7 +4,7 @@ function exchangeCurrency() {
     const fromCurrency = document.getElementById('from-currency').value;
     const toCurrency = document.getElementById('to-currency').value;
 
-    if(amount === '' || isNaN(amount)) {
+    if(amount <= 0 || isNaN(amount)) {
         document.getElementById('error').innerText = 'Trebuie să introduci o valoare numerică în câmpul de mai sus.';
         return;
     }
